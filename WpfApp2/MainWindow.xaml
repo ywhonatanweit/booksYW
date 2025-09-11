@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel 
+        Grid.Row="1" Grid.Column="1" 
+        VerticalAlignment="Center" 
+        HorizontalAlignment="Center"
+        Width="250"
+        >
+            <!-- Username TextBox -->
+            <TextBox
+            Height="40"
+            materialDesign:HintAssist.HelperText="Enter your username"
+            materialDesign:HintAssist.Hint="Username"
+            materialDesign:TextFieldAssist.HasClearButton="True"
+            Margin="0,0,0,15"
+          
+            />
+
+            <!-- Password PasswordBox -->
+            <PasswordBox
+            Height="40"
+            VerticalContentAlignment="Center"
+            materialDesign:HintAssist.HelperText="Not bound password"
+            materialDesign:HintAssist.Hint="Password"
+            materialDesign:TextFieldAssist.HasClearButton="True"
+            IsEnabled="True"
+            Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" />
+
+
+            <Button Click="Books" Content="go to books page" Margin="20"/>
+        </StackPanel>
+    </Grid>
+
+
+
+</Window>
